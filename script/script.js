@@ -50,10 +50,10 @@ function addCity() {
     let cityWordInCapitalize = city.charAt(0).toUpperCase() + city.slice(1).toLowerCase();
 
     if (cities.includes(cityWordInCapitalize)) {
-        document.getElementById("outputBox").innerHTML="Your city '" + cityWordInCapitalize + "' is already in the list!"
+        document.getElementById("outputBox").innerHTML="Your city <span style='color: red; font-size: 20px;'>" + cityWordInCapitalize + "</span> is already in the list!"
     } else {
         cities.push(cityWordInCapitalize);
-        let html = "'" + cityWordInCapitalize + "'" + " has been added successfully!";
+        let html = "Your city <span style='color: green; font-size: 20px;'>"+ cityWordInCapitalize + "</span> has been added successfully!";
         document.getElementById("outputBox").innerHTML = html;
     }
 }
@@ -68,10 +68,10 @@ function checkCity() {
     let cityWordInCapitalize = city.charAt(0).toUpperCase() + city.slice(1).toLowerCase();
 
     if (cities.includes(cityWordInCapitalize)) {
-        let html = "Your city '" + cityWordInCapitalize + "' is in the list &#x1F60D!";
+        let html = "Your city <span style='color: green; font-size: 20px;'>" + cityWordInCapitalize + "</span> is in the list &#x1F60D!";
         document.getElementById("outputBox").innerHTML = html;
     } else {
-        let html = "Ohh sorry! Your city '" + cityWordInCapitalize + "' is not in the list! &#128533;";
+        let html = "Ohh sorry! Your city <span style='color: red; font-size: 20px;'>" + cityWordInCapitalize + "</span> is not in the list! &#128533;";
         document.getElementById("outputBox").innerHTML = html;
     }
 }
@@ -90,11 +90,11 @@ function findWord() {
     let findWord = neworiginalString.indexOf(word);
 
     if (findWord !== -1) {
-        let html = "Your word '" + word + "' found at index: " + findWord;
+        let html = "Your word  <span style='color: green; font-size: 20px;'>" + word + "</span> found at index: <span style='color: green; font-size: 20px;'>" + findWord + "</span>";
         document.getElementById("outputBox").innerHTML = html;
     }
     else {
-        let html = "Your word '" + word + "' Not found in String!";
+        let html = "Your word <span style='color: red; font-size: 20px;'>" + word + "</span> Not found in String!";
         document.getElementById("outputBox").innerHTML = html;
 
     }
